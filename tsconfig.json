@@ -1,33 +1,19 @@
 {
   "compilerOptions": {
-    /* File Layout */
-    "rootDir": "./src",
-    "outDir": "./dist",
-
-    /* Environment Settings */
-    "target": "ES2020",
-    "module": "NodeNext",              
-    "moduleResolution": "NodeNext",    
-    "types": ["node"],
-
-    /* Other Outputs */
-    "sourceMap": true,
-    "declaration": true,
-    "declarationMap": true,
-
-    /* Stricter Typechecking Options */
-    "strict": true,
-    "noUncheckedIndexedAccess": true,
-    "exactOptionalPropertyTypes": true,
-
-    /* Compatibility / Interop */
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-
-    /* Module / Import Behavior */
-    "isolatedModules": true,
-    "verbatimModuleSyntax": true
+    "target": "ES2020",               // Modern JS target
+    "module": "NodeNext",             // ES module system for Node.js
+    "moduleResolution": "NodeNext",   // Required with NodeNext
+    "esModuleInterop": true,          // Enables default import interoperability
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,                   // Enable all strict type checks
+    "skipLibCheck": true,             // Skip type checking for dependencies
+    "outDir": "dist",                 // Compiled JS goes here
+    "rootDir": "src",                 // Source files location
+    "declaration": true,              // Generate .d.ts files
+    "sourceMap": true,                // Generate source maps
+    "verbatimModuleSyntax": true,     // Required for strict ES modules
+    "types": ["node"]                 // Include Node.js types
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "dist"]
+  "include": ["src/**/*"],            // Include all TS files in src
+  "exclude": ["node_modules", "dist"] // Exclude these folders
 }

@@ -5,12 +5,13 @@
   "type": "module",
   "main": "index.ts",
   "scripts": {
-    "dev": "ts-node src/app.ts",
-    "build": "tsc",
-    "start": "node dist/app.js",
-    "prisma:generate": "prisma generate",
-    "prisma:migrate": "prisma migrate dev --name init"
-  },
+  "dev": "tsx watch src/app.ts",
+  "build": "tsc",
+  "start": "node dist/app.js",
+  "prisma:generate": "prisma generate",
+  "prisma:migrate": "prisma migrate dev --name init"
+},
+
   "keywords": [],
   "author": "",
   "license": "ISC",
